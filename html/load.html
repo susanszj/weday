@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>Document</title>
+<!-- 	<style>
+		.div4{
+			width: 200px;
+							height: 200px;
+							background-color: red;
+							opacity: 0;
+		}
+	    }
+	 
+	</style> -->
+</head>
+<body>
+
+    <div class="logoBox">
+        <img id="logo" src="../picture/logo.png" width="250" height="60" alt="">
+        <div class="load">
+            <div class="rg_center" style="padding-top: 10%;padding-bottom: 20%;">
+                <div class="rg_form">
+                    <form action="../index.html" id="form1" method="post">
+                        <table>
+                            <tr>
+                                <td class="td_left"><img src="../picture/ID.png" width="40" height="40" alt=""></td>
+                                <td class="td_right">
+                                    <input type="text"  name="name" id="name"  placeholder="请输入用户账号">
+                                <input type="hidden" id="username" value="user"></td>
+                                
+								</td>
+                            </tr>
+         
+                            <tr>
+                                <td class="td_left"><img src="../picture/pass.png" width="40" height="40" alt=""></td>
+                                <td class="td_right">
+                                    <input type="password" name="password" id="password" placeholder="请输入密码">
+                                <input type="hidden" id="userPass" value="88888888"></td>
+                                
+								</td>
+                            </tr>
+
+                            <tr>
+                                <td class="td_left"><img src="../picture/safe.png" width="40" height="40" alt=""></td>
+                                <td class="td_right">
+                                    <input type="password"name="password1" id="password1" placeholder="请输入验证码">
+                                    
+                                </td>
+                                <td><button class="yzm">获取验证码</button></td>
+                            </tr>
+							
+                            <tr>
+								<td colspan="2" id="td_sub"><input type="button" onclick='check()' id="btn_sub" value="登       录"></td>
+                            </tr>
+							
+                        </table>
+
+                    </form>
+                </div>
+                <div class="forget">
+                    忘记密码?
+                </div>
+				
+                <div class="gotoregister">
+                    立即注册
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!-- 	<a href="index.html"><div class="div4"></div></a> -->
+
+    <div class="head">
+        <div class="joinus">
+            加入我们
+        </div>
+        <div class="help">
+            帮助
+        </div>
+        <div class="about">
+            关于
+        </div>
+        <div class="home">
+                首页
+        </div>
+
+
+
+    </div>
+</body>
+		<script  type="text/javascript" >
+			document.documentElement.style.overflow='hidden';
+			document.body.style.overflow='hidden';
+			
+			
+			     function check() {
+				 var a=document.getElementById('name').value;
+				 var b=document.getElementById('username').value;
+				
+				 var d=document.getElementById('password').value;
+				 var e=document.getElementById('userPass').value;
+			
+				 // window.alert(a+b);
+				 window.alert(b);
+				 // window.alert(e);
+				 if(a==b){
+
+						if(d==e){
+							window.location.href='interact.html';
+						}
+						else{
+							alert("password error!");
+						}
+					 }
+				 }
+				 }
+				  
+		</script>
+</html>

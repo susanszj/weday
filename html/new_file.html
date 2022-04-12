@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+		        input[type]{
+		            border: 1px solid darkorange;
+		            background: white;
+		        }
+		        #button{
+		            border: 10px solid orange;
+		            width: 200px;
+		            box-shadow:0px 4px 5px #666;
+		            background: orange;        
+		            color: white;    
+		        }
+		        
+		    </style>
+	</head>
+	<body>
+	<center>
+	<div>
+	<form action="register.jsp" method="GET">
+	<h3>用户注册</h3>
+	<hr>
+	<p>用户名:<input type="text" id="name" placeholder="请填写用户名" required="required" onblur="name1()"><br><span id="tel"></span></p>
+	<p>出生年月:
+	<select class="sel_year" name="YYYY">
+	<option value="">请选择</option>
+</select>
+<font>年</font>
+<select class="sel_month" name="MM">
+	<option value="">请选择</option>
+</select>
+<font>月</font>
+<select class="sel_day" name="DD">
+	<option value="">请选择</option>
+</select>
+<font>日</font>
+</p>
+	<p>籍贯:</p>
+	<p>性别:<input type="text" name="sex" id="sex" value="" /></p>
+	<p>爱好:<input type="text" name="hobby" id="hobby" value="" /></p>
+	<p>身高:<input type="text" name="height" id="height" value="" /></p>
+	<p>密码:<input id="paswd" type="password" placeholder="请填写密码" onblur="pwd1()" required="required" onfocus="pwd2()"><br><span id="pw"></span></p>
+	<p>确认密码:<input id="paswd2" type="password" placeholder="请确认密码" required="required" onkeyup="validate()" ><br><span id="qpwtx"></span></p>
+	<p>邮箱:<input id="email" type="email" placeholder="请填写邮箱" required="required" onblur="isEmail()"><br><span id="email2"></span></p>
+	<p>电话号码:<input id="phone"type="phone" placeholder="请填写电话号码" required="required" onblur="isphone()"><br><span id="phone2"></span></p>
+	<p>个人简介:<textarea id="personalintro" style="width: 200px;"></textarea></p>
+	<p><input type="checkbox" required="required">我已阅读注册手册</p>
+	<p><input type="submit" id="button" value="注册"></p>
+	</form>
+	</div>
+	</center>
+	</body>
+	<script>
+	function name1(){
+	var name=document.getElementById("name").value;
+	if(name.length<6||name.length>10){
+	document.getElementById("tel").innerHTML="用户名长度在6到10位之间"
+	document.getElementById("tel").style.color="red";
+	}else if(name.charCodeAt(0)< 65 || name.charCodeAt(0) > 90 &&name.charCodeAt(0) < 97 || name.charCodeAt(0) > 122){
+	document.getElementById("tel").innerHTML="用户名首位要求为字母"
+	document.getElementById("tel").style.color="red";
+	}
+	else{
+	document.getElementById("tel").innerHTML="√"
+	document.getElementById("tel").style.color="green";
+	}
+	}
+
+	
+	function pwd2(){
+	document.getElementById("pw").innerHTML="请填写6-12位的密码"
+	document.getElementById("pw").style.color="#999";
+	
+	}
+	function pwd1(){
+	p=document.getElementById("paswd").value;
+	
+	if(p.length>=6&&p.length<=20)
+	{
+	document.getElementById("pw").innerHTML="√"
+	document.getElementById("pw").style.color="green";
+	}else{
+	document.getElementById("pw").innerHTML="格式错误,请输入6-20位"
+	document.getElementById("pw").style.color="red";
+	}
+	}
+	function validate(){
+	var qpw=document.getElementById("paswd").value;
+	var qpw2=document.getElementById("paswd2").value;
+	
+	if(qpw==qpw2 && p.length>=6&&p.length<=20){
+	document.getElementById("qpwtx").innerHTML="<font color='green'>√</font>";
+	document.getElementById("button").disabled = false;
+	}
+	else {
+	document.getElementById("qpwtx").innerHTML="<font color='red'>两次密码不相同或者格式错误</font>";
+	document.getElementById("button").disabled = true;
+	}
+	}
+	
+	var strEmail=document.getElementById("email");
+	function isEmail(strEmail){
+		//定义正则表达式的变量:邮箱正则
+		var reg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+		console.log(strEmail);
+		//文本框不为空，并且验证邮箱正则成功，给出正确提示
+		if(strEmail != null && strEmail.search(reg) != -1)
+		{
+			document.getElementById("email2").innerHTML = "<font color='green' size='4px'>√邮箱格式正确！</font>";
+		}else{
+			document.getElementById("email2").innerHTML = "<font color='red' size='4px'>邮箱格式错误！</font>";
+		}
+	}
+	
+	function isphone(){
+		var strphone=document.getElementById("phone").value;
+		if(strphone.length!=12){
+		document.getElementById("phone2").innerHTML="请填写12位的电话号码";
+		document.getElementById("phone2").style.color="red";
+		}
+		}
+	
+	(function($){
+	$.extend({
+	ms_DatePicker: function (options) {
+	   var defaults = {
+	         YearSelector: "#sel_year",
+	         MonthSelector: "#sel_month",
+	         DaySelector: "#sel_day",
+	         FirstText: "--",
+	         FirstValue: 0
+	   };
+	   var opts = $.extend({}, defaults, options);
+	   var $YearSelector = $(opts.YearSelector);
+	   var $MonthSelector = $(opts.MonthSelector);
+	   var $DaySelector = $(opts.DaySelector);
+	   var FirstText = opts.FirstText;
+	   var FirstValue = opts.FirstValue;
+	
+	   // 初始化
+	   var str = "<option value=\"" + FirstValue + "\">"+FirstText+"</option>";
+	   $YearSelector.html(str);
+	   $MonthSelector.html(str);
+	   $DaySelector.html(str);
+	
+	   // 年份列表
+	   var yearNow = new Date().getFullYear();
+	   var yearSel = $YearSelector.attr("rel");
+	   for (var i = yearNow; i >= 1900; i--) {
+			var sed = yearSel==i?"selected":"";
+			var yearStr = "<option value=\"" + i + "\" " + sed+">"+i+"</option>";
+	        $YearSelector.append(yearStr);
+	   }
+	
+	    // 月份列表
+		var monthSel = $MonthSelector.attr("rel");
+	    for (var i = 1; i <= 12; i++) {
+			var sed = monthSel==i?"selected":"";
+	        var monthStr = "<option value=\"" + i + "\" "+sed+">"+i+"</option>";
+	        $MonthSelector.append(monthStr);
+	    }
+	
+	    // 日列表(仅当选择了年月)
+	    function BuildDay() {
+	        if ($YearSelector.val() == 0 || $MonthSelector.val() == 0) {
+	            // 未选择年份或者月份
+	            $DaySelector.html(str);
+	        } else {
+	            $DaySelector.html(str);
+	            var year = parseInt($YearSelector.val());
+	            var month = parseInt($MonthSelector.val());
+	            var dayCount = 0;
+	            switch (month) {
+	                 case 1:
+	                 case 3:
+	                 case 5:
+	                 case 7:
+	                 case 8:
+	                 case 10:
+	                 case 12:
+	                      dayCount = 31;
+	                      break;
+	                 case 4:
+	                 case 6:
+	                 case 9:
+	                 case 11:
+	                      dayCount = 30;
+	                      break;
+	                 case 2:
+	                      dayCount = 28;
+	                      if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+	                          dayCount = 29;
+	                      }
+	                      break;
+	                 default:
+	                      break;
+	            }
+						
+				var daySel = $DaySelector.attr("rel");
+	            for (var i = 1; i <= dayCount; i++) {
+					var sed = daySel==i?"selected":"";
+					var dayStr = "<option value=\"" + i + "\" "+sed+">" + i + "</option>";
+	                $DaySelector.append(dayStr);
+	             }
+	         }
+	      }
+	      $MonthSelector.change(function () {
+	         BuildDay();
+	      });
+	      $YearSelector.change(function () {
+	         BuildDay();
+	      });
+		  if($DaySelector.attr("rel")!=""){
+			 BuildDay();
+		  }
+	   } // End ms_DatePicker
+	});
+	})(jQuery);
+
+	</script>
+</html>

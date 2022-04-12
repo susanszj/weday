@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<style type="text/css">
+			body{
+				margin:0;
+				padding:0;
+				background-image:url(../picture/网页%20消息.png);
+				background-repeat:no-repeat;
+				background-size:1520px;
+				min-height: 185vh;
+			}
+			.box{
+				height: 800px;
+				width:1200px;
+				margin-left:150px ;
+				margin-top: 100px;
+				/* border: 1px solid black; */
+			}
+			.news_left{
+				float: left;
+				height:750px;
+				width:200px;
+				/* border: 1px solid black; */
+			}
+			.news_right{
+				margin-top: -10px;
+				float: left;
+				height:750px;
+				width:992px;
+				/* border: 1px solid black */
+			}
+			.search{
+				width: 200px;
+				height:40px;
+				background-color: #FFFFFF;
+				border-radius: 5px;
+			}
+			.newsss{
+				margin-left: 50px;
+				margin-top: 10px;
+				width:200px;
+				height: 80px;
+				font-size: 25px;
+			}
+			.left_bottom{
+				width: 200px;
+				height:620px;
+				background-color: #FFFFFF;
+				border: 1px solid #DCDCDC;
+				border-radius: 5px;
+			}
+			.right_bottom{
+				position:relative;
+				width: 992px;
+				height:620px;
+				background-color: #FFFFFF;
+				border-radius: 5px;
+				border: 1px solid #DCDCDC;
+			}
+			.right_head{
+				width: 992px;
+				height:130px;
+				border-radius: 5px;
+			}
+			.inter_letter{
+				height: 15px;
+				margin-right: 50px;
+				margin-top: 30px;
+				float: right;
+			}
+			.inter_letter_more{
+				margin-right: 40px;
+				margin-top: -20px;
+				float: right;
+				color: #8F8F8F;
+			}
+			#send{
+				margin-left: 820px;
+				position: absolute;
+				margin-top:560px;
+			}
+			#sendtext{
+				position: absolute;
+				resize: none;
+				width: 800px;
+				margin-top:450px;
+				margin-left:70px;
+				font-size: 15px;
+				color: black;
+				text-indent: 53px;
+				border:2px solid #DCDCDC;
+				border-radius: 10px;
+				padding: 20px;
+			}
+			.yes{
+			float: right;
+			width: 100px;
+			height: 50px;
+			border:solid 1px #A6A6A6 ;
+			text-align: center;
+			line-height:50px;
+			border-radius: 10px;
+			margin-top: 20px;
+			margin-right:10px;
+			}
+			.photocircle{
+				float: right;
+				 background-image: url(../picture/头像.png);
+				 background-size:cover;
+				 width:50px;
+				 height:50px; 
+				 margin-top: -70px;
+				 margin-right: 20px;
+				 margin-top: 25px;
+			}
+			
+			.inter1{
+			
+				width: 80px;
+				height: 80px;
+				margin-right:45px;
+				margin-top: -70px;
+				float: right;
+				background-color: red;
+				opacity: 0;
+				border: 1px solid black;
+			}
+			
+			.square1{
+				width: 80px;
+				height: 80px;
+				margin-right:45px;
+				margin-top: -70px;
+				float: right;
+				background-color: red;
+				opacity: 0;
+				border: 1px solid black;
+			}
+			
+			.letter1{
+			
+				width: 80px;
+				height: 80px;
+				margin-right: 55px;
+				margin-top: -70px;
+				float: right;
+				background-color: red;
+				opacity: 0;
+				border: 1px solid black;
+			}
+			
+			.VIP1{
+			
+				width: 80px;
+				height: 80px;
+				margin-right: 250px;
+				margin-top: -70px;
+				float: right;
+				background-color: red;
+				opacity: 0;
+				background-color: #666666;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<a href="VIP.html"><div class="VIP1">4</div></a>
+		<a href="letter.html"><div class="letter1">3</div></a>
+		<a href="square.html"><div class="square1">2</div></a>
+		<a href="interact.html"><div class="inter1">1</div></a>
+		<div class="box">
+			<div class="news_left">
+				<div class="search">
+					<textarea rows="1"style="width: 150px;
+		    margin:10px;
+			margin-top: 10px;
+			margin-left: 0px;
+		    font-size: 15px;
+		    color: #778899;
+		    text-indent:53px;
+			border:none;
+			font-size: 16px;
+			resize: none;
+			line-height: 15px;"placeholder="搜索什么……"></textarea>				
+				</div>
+				<div class="newsss">
+					消息（98）
+				</div>
+				<div class="left_bottom">
+					<div class="inter">
+						<img src="../picture/消息.png" width="50px" height="50px" style="margin-left: 20px;margin-top: 30px;">
+						<div class="inter_letter">
+							互动消息
+						</div>
+						<div class="inter_letter_more" style="font-size: 12px;">
+							暂无互动消息
+						</div>
+					</div>
+					<div class="inter">
+						<img src="../picture/头像2.png" width="50px" height="50px" style="margin-left: 20px;margin-top: 30px;">
+						<div class="inter_letter" style="margin-right: 90px;">
+							  lxq
+						</div>
+						<div id="letter_more"	class="inter_letter_more" style="font-size: 12px;margin-right: 78px;">
+							你好呀
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="news_right">
+				<div class="right_head">
+					<img src="../picture/添加.png" width="80px" height="80px" style="float: right;margin-right: 30px;margin-top: 20px;">
+					<img src="../picture/我的2.png" width="80px" height="80px" style="float: right;margin-right: 30px;margin-top: 20px;">
+					
+				</div>
+				
+				<div class="right_bottom" id="conversation">
+					<textarea rows="6" cols="120" id="sendtext" placeholder="输入一个消息……"></textarea>
+					<button id="send" onclick="appendText()">发送信息</button>
+					<img src="../picture/conversation.png"width="980px" height="60px">
+					<!-- <input type="button" id="btn" value="点击按钮" onclick="appendText()">
+					<div  id="desc" style="background-color: #247DFA;height: 100px;width:200px ;"></div> -->
+				
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+	</script>
+	<script>
+	function appendText(){
+		
+		// var txt1="<div>文本-1。</div>";              // 使用 HTML 标签创建文本
+		// var txt2=$("<p></p>").text("文本-2。");  // 使用 jQuery 创建文本
+		// var txt3=document.createElement("p");
+		// txt3.innerHTML="文本-3。";               // 使用 DOM 创建文本 text with DOM
+		// $("#conversation").append(txt1,txt2,txt3);        // 追加新元素
+		var txt = document.getElementById('sendtext');
+		$("<div></div>").attr('id', 'photo').addClass("photocircle").appendTo($("#conversation"));
+		$("<div>yes</div>").attr('id', 'con1').addClass("yes").appendTo($("#conversation"));
+		var desc = document.getElementById('con1');
+		var val = sendtext.value;
+		val = val.replace(/\r\n/g, '<br/>'); //IE9、FF、chrome
+		val = val.replace(/\n/g, '<br/>'); //IE7-8
+		val = val.replace(/\s/g, ' '); //空格处理
+		desc.innerHTML = val;
+		$("con1").addClass("yes").appendTo($("#conversation"));
+		$("#letter_more").html(val);
+		document.getElementById("sendtext").value="";
+	}
+
+	// var text = document.getElementById('txt').innerHTML;
+	// document.getElementById('con1').innerHTML=text.value;
+	// document.write(1);
+	// document.getElementById('desc').innerHTML=123;
+	// var txt = document.getElementById('sendtext');
+	// var btn = document.getElementById('btn');
+	// var desc = document.getElementById('desc');
+	//     btn.onclick = function () {
+	//         var val = txt.value
+	//         val = val.replace(/\r\n/g, '<br/>'); //IE9、FF、chrome
+	//         val = val.replace(/\n/g, '<br/>'); //IE7-8
+	//         val = val.replace(/\s/g, ' '); //空格处理
+	//         desc.innerHTML = val;
+	// 		}
+			
+	
+
+</script>
+
+</html>
+

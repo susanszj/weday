@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/common.css" rel="stylesheet" />
+		<style>
+		body{
+			margin:0;
+			padding:0;
+			background-image:url(../picture/suqare.png);
+			background-repeat:no-repeat;
+			background-size:1520px;
+			min-height: 185vh;
+		}
+		.menu{
+		     position: fixed;
+		     left: 50px;
+		     top: 150px;
+		     width: 220px;
+		     height: 250px;
+		     background-color:#FFFFFF;
+		    border-radius: 10%;
+			box-shadow: 0 0 5px #DCDCDC;
+		}
+		
+		 textarea{
+		    width: 600px;
+		    margin:10px;
+			margin-top: -100px;
+		    font-size: 15px;
+		    font-family: "微软雅黑";
+		    color: #778899;
+		    text-indent:53px;
+			border:none;
+		 }
+		 .menu a{
+			 
+		    color: #778899;
+		 }
+/* 		 .menu a:hover
+		 {
+		    color: black;
+		 } */
+		 * {
+			 /* position:absolute; */
+		    padding: 0;
+		    margin: 0;
+		}
+		.sidebarelement{
+			/* position:absolute; */
+			margin: 0px;
+			width:220px;
+			height:60px;
+			/* border:1px solid #000000; */
+		}
+		.text{
+			/* position:absolute; */
+			float: left;
+			margin-top: 15px;
+			margin-left: 10px;
+		}
+		.bareimg{
+			/* position:absolute; */
+			float: left;
+			margin-top: 13px;
+			margin-left: 38px;
+			width:30px;
+			height: 30px;
+		}
+		.release{
+			position:absolute;
+			width:900px;
+			height:130px;
+ 			top:150px;
+			left: 400px; 
+			/* border:1px solid #000000; */
+			background-color: #FFFFFF;
+		}
+		.textarea1{
+			position:absolute; 
+			width:800px;
+			height:100px;
+			margin-top:80px;
+			margin-left:30px;
+			/* border:1px solid #000000; */
+		}
+		.wedaynews{
+			position: absolute;
+			background-color: #f4f4f4;
+			margin-top: 90px;
+			margin-left: 90px;
+			width:100px;
+			height:25px;
+			border-radius: 50px;
+			/* border:1px solid #000000; */
+			color: #8f8f8f;
+			font-size: 13px;
+			text-align: center;
+			line-height: 25px;
+		}
+		.wedaynews2{
+			position: absolute;
+			background-color: #f4f4f4;
+			margin-top: 90px;
+			margin-left: 220px;
+			width:100px;
+			height:25px;
+			border-radius: 50px;
+			/* border:1px solid #000000; */
+			color: #8f8f8f;
+			font-size: 13px;
+			text-align: center;
+			line-height: 25px;
+		}
+		.plus{
+			position: absolute;
+			background-color: #a5cced;
+			margin-top: 40px;
+			margin-left: 750px;
+			width:80px;
+			height:40px;
+			border-radius: 50px;
+			/* border:1px solid #000000; */
+			color: #FFFFFF;
+			font-size: 33px;
+			text-align: center;
+			line-height: 40px;
+		}
+		.circle{
+			position:absolute;
+			width:900px;
+			height:320px;
+			top:310px;
+			left: 400px; 
+			/* border:1px solid #000000; */
+			background-color: #FFFFFF;
+		}
+		.portrait{
+			position: relative;
+			width:50px;
+			height:50px;
+			top:30px;
+			left: 30px; 
+			/* border:1px solid #000000; */
+			background-color: #FFFFFF;
+		}
+		.praise{
+			position: relative;
+			width: 50px;
+			height: 50px;
+			top:-20px;
+			left: 100px;
+		}
+		.time{
+			position: relative;
+			width: 50px;
+			height: 50px;
+			top:-45px;
+			left: 100px;
+			font-size: 10px;
+		}
+		.newss{
+			position: relative;
+			width: 500px;
+			height: 50px;
+			top:-55px;
+			left: 30px;
+			font-size: 10px;
+			font-size: 15px;
+		}
+		.scarf{
+			position: relative;
+			width: 100px;
+			height: 100px;
+			top:-65px;
+			left: 30px;
+			font-size: 15px;
+		}
+		.scan{
+			position: relative;
+			width: 100px;
+			height: 20px;
+			top:-55px;
+			left: 30px;
+			font-size: 10px;
+			color: #A6A6A6;
+		}
+		.review{
+			width:200px;
+			height:30px;
+			margin-right:60px ;
+			margin-top: 90px;
+			float: right;
+			/* border:1px solid #A5CCED; */
+		}
+		.point{
+			float:left;
+			margin-left: 25px;
+		    font-size: 13px;
+		}
+		#update{
+			position: absolute;
+			background-color: #a5cced;
+			margin-top: 190px;
+			margin-left: 1050px;
+			width:80px;
+			height:40px;
+			border-radius: 50px;
+			/* border:1px solid #000000; */
+			color: #FFFFFF;
+			font-size:15px;
+			text-align: center;
+			line-height: 40px;
+		}
+		
+		
+		
+		
+
+		</style>
+	</head>
+	<body>
+		<a href="VIP.html"><div class="VIP1">4</div></a>
+		<a href="letter.html"><div class="letter1">3</div></a>
+		<a href="square.html"><div class="square1">2</div></a>
+		<a href="interact.html"><div class="inter1">1</div></a>
+		<div class="sidebar">  
+		    <div class="menu">
+		                <div class="textarea">
+		                <p>
+							<a href="news.details.html" >
+							<div class="sidebarelement" style="background-color:#E6E6FA;box-shadow: 0 0 15px #E6E6FA;">
+								<img class="bareimg" src="../picture/广场.png">
+								<div class="text">
+									广场
+								</div>
+							</div>
+							</a>
+						</p><br>
+		                <p>
+							<a href="news.details.html">
+		                	<div class="sidebarelement">
+								<img class="bareimg" src="../picture/推荐.png">
+		                		<div class="text">
+		                			推荐
+		                		</div>
+		                	</div>
+							</a>
+		                </p><br>
+						<p>
+							<a href="news.details.html">
+							<div class="sidebarelement">
+								<img class="bareimg" src="../picture/兴趣爱好.png">
+								<div class="text">
+									兴趣爱好
+								</div>
+							</div>
+							</a>	
+						</p><br>
+		                </div>
+		    </div>
+		</div>  
+		
+		
+		
+		<div class="release">
+						<a href="#"><div class="plus">+</div></a>
+			<div class="textarea1">
+			<textarea rows="3" cols="30" style="resize: none;" placeholder="发布一条weday动态吧"></textarea> 
+			</div>
+			<div class="wedaynews">#2022新人</div>
+			<div class="wedaynews2">#weday</div>
+
+		</div>
+		<a href="new_square.html">
+		<div id="update">
+			
+			刷新动态
+		</div>
+		</a>
+		<div class="circle">
+			<img src="../picture/头像.png" class="portrait">
+
+			<div class="praise">
+				夸夸
+			</div>
+			<div class="time">
+				1分钟前
+			</div>
+			<div class="review">
+				<div class="point">
+					<img src="../picture/content.png" width="20px" height="20px">
+					15
+				</div>
+				<div class="point">
+					<img src="../picture/电灯泡.png" width="20px" height="20px">
+					20
+				</div>
+				<div class="point">
+					<img src="../picture/点赞.png" width="20px" height="20px">
+					30
+				</div>
+				
+				
+			</div>
+			<div class="newss">
+				不知道你们的围巾织的怎么样了，反正我很暖和~
+			</div>
+			<img src="../picture/照片.png" class="scarf">
+			<div class="scan">
+				浏览101次
+			</div>
+
+			<textarea style="
+			resize: none;
+			width: 830px;
+			position: absolute;
+			margin-top:-50px;
+			margin-left: 30px;
+			font-size: 15px;
+			color: #778899;
+			text-indent: 53px;
+			border:2px solid #A5CCED;" rows="1" cols="30" placeholder="评论"></textarea>
+			
+			
+		</div>
+		
+
+
+
+		
+		
+	</body>
+</html>

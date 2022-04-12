@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#movie_letter_list{
+				height:620px;
+				width: 500px;
+			}
+			.right_bottom{
+				position:relative;
+				width:702px;
+				height:660px;
+				background-color: #FFFFFF;
+				border-radius: 5px;
+				border: 1px solid #DCDCDC;
+			}
+			#sendtext{
+				position: absolute;
+				resize: none;
+				width: 500px;
+				margin-top:450px;
+				margin-left:70px;
+				font-size: 15px;
+				color: black;
+				text-indent: 53px;
+				border:2px solid #DCDCDC;
+				border-radius: 10px;
+				padding: 20px;
+			}
+			#send{
+				margin-left: 500px;
+				position: absolute;
+				margin-top:560px;
+			}
+			.yes{
+			float: right;
+			width: 100px;
+			height: 50px;
+			border:solid 1px #A6A6A6 ;
+			text-align: center;
+			line-height:50px;
+			border-radius: 10px;
+			margin-top: 20px;
+			margin-right:10px;
+			}
+			.photocircle{
+				float: right;
+				 background-image: url(../picture/头像.png);
+				 background-size:cover;
+				 width:50px;
+				 height:50px; 
+				 margin-right: 20px;
+				 margin-top: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="movie_letter_list">
+			<div class="right_bottom" id="conversation">
+				<textarea rows="6" cols="120" id="sendtext" placeholder="输入一个消息……"></textarea>
+				<button id="send" onclick="appendText()">发送信息</button>
+				<img src="../picture/conversation.png" width="980px" height="60px">
+				<!-- <input type="button" id="btn" value="点击按钮" onclick="appendText()">
+				<div  id="desc" style="background-color: #247DFA;height: 100px;width:200px ;"></div> -->
+			
+			</div>
+		</div>
+	</body>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+		</script>
+		<script>
+		function appendText(){
+			
+			// var txt1="<div>文本-1。</div>";              // 使用 HTML 标签创建文本
+			// var txt2=$("<p></p>").text("文本-2。");  // 使用 jQuery 创建文本
+			// var txt3=document.createElement("p");
+			// txt3.innerHTML="文本-3。";               // 使用 DOM 创建文本 text with DOM
+			// $("#conversation").append(txt1,txt2,txt3);        // 追加新元素
+			var txt = document.getElementById('sendtext');
+			$("<div></div>").attr('id', 'photo').addClass("photocircle").appendTo($("#conversation"));
+			$("<div>yes</div>").attr('id', 'con1').addClass("yes").appendTo($("#conversation"));
+			var desc = document.getElementById('con1');
+			var val = sendtext.value;
+			val = val.replace(/\r\n/g, '<br/>'); //IE9、FF、chrome
+			val = val.replace(/\n/g, '<br/>'); //IE7-8
+			val = val.replace(/\s/g, ' '); //空格处理
+			desc.innerHTML = val;
+			$("con1").addClass("yes").appendTo($("#conversation"));
+			$("#letter_more").html(val);
+			document.getElementById("sendtext").value="";
+		}
+	
+		// var text = document.getElementById('txt').innerHTML;
+		// document.getElementById('con1').innerHTML=text.value;
+		// document.write(1);
+		// document.getElementById('desc').innerHTML=123;
+		// var txt = document.getElementById('sendtext');
+		// var btn = document.getElementById('btn');
+		// var desc = document.getElementById('desc');
+		//     btn.onclick = function () {
+		//         var val = txt.value
+		//         val = val.replace(/\r\n/g, '<br/>'); //IE9、FF、chrome
+		//         val = val.replace(/\n/g, '<br/>'); //IE7-8
+		//         val = val.replace(/\s/g, ' '); //空格处理
+		//         desc.innerHTML = val;
+		// 		}
+				
+		
+	
+	</script>
+</html>
